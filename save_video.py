@@ -35,8 +35,8 @@ def press_key(key, recording, output, output_path, video_format, frame, width, h
     quit_flag = key == ord('q')
     return recording, output, output_path, quit_flag
 
+model = YOLO("yolov8n.pt")
 def predict(frame):
-    model = YOLO("yolov8n.pt")
     results = model(frame, device=0)
     return results
 
