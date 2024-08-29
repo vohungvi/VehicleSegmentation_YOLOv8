@@ -1,17 +1,7 @@
 import cv2
 from ultralytics import YOLO, solutions
-import argparse
 
-def parse_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-m', '--model', type=str, default='yolov8n.pt')
-    parser.add_argument('-c', '--count_mode', type=str, default='region')
-    args = parser.parse_args()
-    return args
-
-def count_Vehicles(parse_args):
-    model = parse_args.model
-    count_mode = parse_args.count_mode
+def count_Vehicles(model=None, count_mode=None):
     model = YOLO(model)
     cap = cv2.VideoCapture("highway.mp4")
     assert cap.isOpened(), "Error reading video file"
