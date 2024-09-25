@@ -1,5 +1,9 @@
 # HighwayCounter_YOLOv8
 
+![](image/highway_counter.png)
+
+*Test bằng chương trình YOLOLYTIC*
+
 ## Yêu Cầu
 Cài đặt Python 3.8.10
 
